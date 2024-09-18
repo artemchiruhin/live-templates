@@ -1,0 +1,81 @@
+<templateSet group="PHP">
+  <template name="filedump" value="file_put_contents(&#10;    __DIR__ . '/aaaaaaaaaaaaaaaaaaaaaaaa.php',&#10;    &quot;&lt;?php \$dump = &quot; . var_export($end$, true) . &quot;; ?&gt;\n&quot;,&#10;    FILE_APPEND&#10;);" description="Вывод чего-либо в файл" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="predump" value="echo '&lt;pre&gt;';&#10;var_dump($end$);&#10;echo '&lt;/pre&gt;';" description="Dump в тэге pre" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="php" value="&lt;?php $end$ ?&gt;" description="Вывод PHP тэга" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="eco" value="echo $END$;" description="'echo' statement" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
+  <template name="phpe" value="&lt;?= $end$; ?&gt;" description="Сокращенное echo" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="asset" value="use Bitrix\Main\Page\Asset;&#10;$asset = Asset::getInstance();&#10;$asset-&gt;add$file_type$('$file_path$');" description="Bitrix asset" toReformat="false" toShortenFQNames="true">
+    <variable name="file_type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="file_path" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="egl" value="$arOrder = [&quot;SORT&quot; =&gt; &quot;ASC&quot;];&#10;$arFilter = [$END$];&#10;$arSelectFields = [&quot;ID&quot;, &quot;ACTIVE&quot;, &quot;NAME&quot;];&#10;$rsElements = CIBlockElement::GetList($arOrder, $arFilter, false, false, $arSelectFields);&#10;while($arElement = $rsElements-&gt;GetNext())&#10;{&#10;&#10;}" description="Element GetList" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="sgl" value="$arSort = [&quot;SORT&quot; =&gt; &quot;ASC&quot;];&#10;$arFilter = [&quot;IBLOCK_ID&quot; =&gt; $arParams[&quot;IBLOCK_ID&quot;], &quot;ID&quot; =&gt; $END$];&#10;$rsSections = CIBlockSection::GetList($arSort, $arFilter);&#10;while ($arSection = $rsSections-&gt;GetNext())&#10;{&#10;   &#10;}" description="Section GetList" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="app" value="$APPLICATION" description="Application variable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="addcss" value="\Bitrix\Main\Page\Asset::getInstance()-&gt;addCss(SITE_TEMPLATE_PATH . $END$);" description="Add CSS file in D7" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="addjs" value="\Bitrix\Main\Page\Asset::getInstance()-&gt;addJs(SITE_TEMPLATE_PATH . $END$);" description="Add JS file in D7" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="addstr" value="\Bitrix\Main\Page\Asset::getInstance()-&gt;addString($END$);" description="Add string to head in D7" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="prologbefore" value="require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');" description="Includes prolog before file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="stp" value="SITE_TEMPLATE_PATH" description="Site template path constant" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="prologincluded" value="if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

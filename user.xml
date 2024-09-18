@@ -1,0 +1,188 @@
+<templateSet group="user">
+  <template name="media" value="@media screen and (max-width: $width$px) {&#10;    $properties$&#10;}" description="Media query for max-width Npx" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="properties" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="flex-center" value="display: flex;&#10;align-items: center;&#10;justify-content: center;" description="display: flex; align-items: center; justify-content: center;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="scroll-0" value="-ms-overflow-style: none;&#10;scrollbar-width: none;  &#10;&#10;&amp;::-webkit-scrollbar {&#10;  display: none;&#10;}" description="Removes scrollbar" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="v" value="var($end$)" description="CSS variable" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="bitrixheader" value="require($_SERVER[&quot;DOCUMENT_ROOT&quot;].&quot;/bitrix/header.php&quot;);" description="Includes header" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrixfooter" value="require($_SERVER[&quot;DOCUMENT_ROOT&quot;].&quot;/bitrix/footer.php&quot;);" description="Includes footer" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="dots" value="display: -webkit-box;&#10;-webkit-line-clamp: $lines$; // количество строк&#10;-webkit-box-orient: vertical;&#10;overflow: hidden;" description="Троеточие в конце строки" toReformat="false" toShortenFQNames="true">
+    <variable name="lines" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="linesamount" value="display: -webkit-box;&#10;-webkit-line-clamp: $end$;&#10;-webkit-box-orient: vertical;&#10;overflow: hidden;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="tne" value="throw new Error('$END$');" description="Throw new Error()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="customcheckbox" value=".custom-checkbox-label {&#10;  cursor: pointer;&#10;  display: flex;&#10;  justify-content: start;&#10;  align-items: center;&#10;  transition-duration: var(--transition-duration);&#10;&#10;  .custom-checkbox {&#10;    opacity: 0;&#10;    width: 0 !important;&#10;&#10;    &amp;:checked {&#10;      &amp; ~ .custom-checkbox-rect {&#10;        background-color: $first$;&#10;        border-color: $second$;&#10;&#10;        svg {&#10;          opacity: 1;&#10;        }&#10;&#10;        /* Стили для иконки */&#10;      }&#10;&#10;      &amp; ~ .custom-checkbox-text {&#10;        color: $third$;&#10;      }&#10;    }&#10;&#10;    &amp;:focus {&#10;      &amp; ~ .custom-checkbox-rect svg {&#10;        opacity: 1;&#10;      }&#10;    }&#10;&#10;    &amp;:focus-visible {&#10;      &amp; ~ .custom-checkbox-rect svg {&#10;        opacity: 1;&#10;      }&#10;    }&#10;&#10;    &amp;:disabled {&#10;      pointer-events: none;&#10;&#10;      &amp; ~ .custom-checkbox-rect {&#10;        border: $fourth$;&#10;&#10;        svg {&#10;          opacity: 0;&#10;        }&#10;      }&#10;&#10;      &amp; ~ .custom-checkbox-text {&#10;        color: $fifth$;&#10;      }&#10;    }&#10;  }&#10;&#10;  .custom-checkbox-rect {&#10;    width: $sixth$;&#10;    height: $seventh$;&#10;    line-height: 0;&#10;    border: $eights$;&#10;    border-radius: $nineth$;&#10;    display: flex;&#10;    align-items: center;&#10;    justify-content: center;&#10;    margin-right: $tenth$;&#10;&#10;    svg {&#10;      opacity: 0;&#10;    }&#10;  }&#10;&#10;  .custom-checkbox-text {&#10;    font-size: $eleventh$;&#10;    line-height: $twelveth$;&#10;    color: $thirteenth$;&#10;    word-break: break-word;&#10;  }&#10;&#10;  &amp;:hover {&#10;    svg {&#10;      opacity: 1;&#10;    }&#10;  }&#10;}" description="Custom checkbox SCSS styles" toReformat="false" toShortenFQNames="true">
+    <variable name="first" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="second" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="third" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fourth" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fifth" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sixth" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="seventh" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="eights" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="nineth" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tenth" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="eleventh" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="twelveth" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="thirteenth" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="dcl" value="document.addEventListener('DOMContentLoaded', () =&gt; {&#10;    $end$&#10;});" description="DOM content loaded listener" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dqs" value="document.querySelector('$end$');" description="document.querySelector" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="dqsa" value="document.querySelectorAll('$ned$');" description="document.querySelectorAll" toReformat="false" toShortenFQNames="true">
+    <variable name="ned" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="request" value="$request = \Bitrix\Main\Application::getInstance()-&gt;getContext()-&gt;getRequest();&#10;$request-&gt;isPost();&#10;$request-&gt;getPost('$end$')" description="Bitrix request" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bxajax" value="BX.ajax(&#10;            {&#10;                url: '',&#10;                method: 'POST',&#10;                data: {&#10;                    '': ''&#10;                },&#10;                dataType: 'json',&#10;                timeout: 5,&#10;                async: true,&#10;                processData: true,&#10;                onsuccess: (data) =&gt; {&#10;                    if (data?.status === 'success') {&#10;                        &#10;                    } else {&#10;                        console.error(`Ошибка при запросе, ${JSON.stringify(data.errors)}`)&#10;                    }&#10;                },&#10;                onfailure: () =&gt; {&#10;                    console.log('Ошибка при запросе');&#10;                    return false;&#10;                }&#10;            }&#10;        );" description="BX.ajax" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="imr" value="import React from 'react';" description="Import React" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="bitrixevent" value="use Bitrix\Main\EventManager;&#10;$eventManager = EventManager::getInstance();&#10;$handler = $eventManager-&gt;addEventHandler(&#10;    &quot;$module$&quot;,&#10;    &quot;$event$&quot;,&#10;    &quot;$callback$&quot;&#10;);" description="Bitrix Event Manager" toReformat="false" toShortenFQNames="true">
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="event" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="callback" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="uploadht" value="&lt;IfModule mod_rewrite.c&gt;&#10;  RewriteEngine On&#10;  RewriteCond %{REQUEST_FILENAME} !-f&#10;  RewriteCond %{REQUEST_FILENAME} !-d&#10;  RewriteCond %{HTTP_HOST} !=domain.com [NC]&#10;  RewriteRule ^(.*)$ http://domain.com/upload/$1&#10;&lt;/IfModule&gt;&#10;&lt;FilesMatch &quot;\.(php.?|phtml|pl|aspx?|cgi|exe)\..*&quot;&gt;&#10;        Order Allow,Deny&#10;        Deny from All&#10;&lt;/FilesMatch&gt;&#10;&lt;IfModule mod_mime.c&gt;&#10;&#9;AddType text/plain .php .php3 .php4 .php5 .php6 .phtml .pl .asp .aspx .cgi .exe&#10;&lt;/IfModule&gt;" description="htaccess file in upload folder" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ANY_OPENAPI_JSON_FILE" value="false" />
+      <option name="ANY_OPENAPI_YAML_FILE" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GENERAL_JSON_FILE" value="false" />
+      <option name="GENERAL_YAML_FILE" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="HTTP_CLIENT_ENVIRONMENT" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="PHP" value="false" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="Twig" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="gld7" value="$elements = \Bitrix\Iblock\Elements\Element$iblock$Table::getList([&#10;    'select' =&gt; ['ID', 'NAME', 'СВОЙСТВО_' =&gt; 'СВОЙСТВО'],&#10;    'filter' =&gt; ['=ACTIVE' =&gt; 'Y'],&#10;])-&gt;fetchAll();&#10;foreach ($elements as $element) {&#10;    $end$&#10;}" description="getList D7 Bitrix" toReformat="false" toShortenFQNames="true">
+    <variable name="iblock" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="isadmin" value="global $USER;&#10;if($USER-&gt;IsAdmin()) {&#10;    $end$&#10;}" description="Check if user is admin" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ajaxdefine" value="define('STOP_STATISTICS', true);&#10;define('NOT_CHECK_PERMISSIONS', true);&#10;define(&quot;PUBLIC_AJAX_MODE&quot;, true);&#10;define(&quot;NO_KEEP_STATISTIC&quot;, &quot;Y&quot;);&#10;define(&quot;NO_AGENT_STATISTIC&quot;, &quot;Y&quot;);&#10;define(&quot;NO_AGENT_CHECK&quot;, true);&#10;define(&quot;DisableEventsCheck&quot;, true);" description="Константы для AJAX обработчика" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="skeleton" value="&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&#10;&lt;style&gt;&#10;.line {&#10;    width: 140px;&#10;    height: 16px;&#10;    margin-top: 12px;&#10;    border-radius: 7px;&#10;    background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);&#10;    background-size: 600px;&#10;    animation: shine-lines 1.5s infinite linear;&#10;}&#10;@keyframes shine-lines {&#10;    0% {&#10;        background-position: -100px;&#10;    }&#10;    40%, 100% {&#10;        background-position: 140px;&#10;    }&#10;}&#10;&lt;/style&gt;" description="HTML + CSS Skeleton" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="dd" value="var_dump($dump$); die();" description="Dump and die" toReformat="false" toShortenFQNames="true">
+    <variable name="dump" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="orderabort" value="return new \Bitrix\Main\EventResult(&#10;    \Bitrix\Main\EventResult::ERROR,&#10;    \Bitrix\Sale\ResultError::create(&#10;        new Main\Error(&quot;$message$&quot;,&#10;            &quot;$code$&quot;&#10;        )&#10;    )&#10;);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="message" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="code" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="modifier" value="if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();&#10;&#10;/** @var array $arParams */&#10;/** @var array $arResult */&#10;&#10;" description="result modifier include file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="delay" value="return new Promise$type$((resolve) =&gt; setTimeout(() =&gt; { resolve($resolve$) }, $time$));" description="Fake delay" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="resolve" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="time" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
